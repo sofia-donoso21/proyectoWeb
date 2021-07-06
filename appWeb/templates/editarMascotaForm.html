@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block titulo %}
+    Agregar nueva mascota
+{% endblock %}
+
+{% block contenido %}
+    <h1>Agregar Nueva Mascota</h1>
+    <form action=" " method="POST" id="formulario">
+        {% csrf_token %}
+
+        <div class?"form-group">
+            {{form.as_table}}
+        </div>
+
+        <ul>
+            <ol><input type = "submit" class="btn btn-danger" value ="Modificar Mascota" id="guardar" ></ol>
+            <ol><input type = "reset"  class="btn btn-primary" value ="Limpiar Campos" id="limpiar" ></ol>
+        </ul>
+    </form>
+
+    <div class="alert alert-success" role="alert">
+        {{mensaje}}
+    <a href="{% url 'listarMascota' %}">Ir a la lista de</a> 
+    </div>
+
+{% endblock %}

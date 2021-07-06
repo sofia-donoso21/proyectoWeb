@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block titulo %}
+    Agregar nueva reserva
+{% endblock %}
+
+{% block contenido %}
+    <h1 style="color: azure;">Agregar Nueva Reserva</h1>
+    <form action="" method="POST" id="formulario" style="margin-top: 30px;">
+        {% csrf_token %}
+
+        <div class="form-group">
+            {{form.as_table}}
+        </div>
+
+        <ul style="margin-top: 20px; text-align: center;">
+            <input type = "submit" class="btn btn-danger" value ="Guardar Mascota" id="guardar" >
+            <input type = "reset"  class="btn btn-primary" value ="Limpiar Campos" id="limpiar" >
+            <div  role="alert">
+                {{mensaje}}
+                <a href="{% url 'listarMascota' %}" class="btn btn-warning">Ir a la lista de Mascotas</a>
+            </div>
+        </ul>
+        
+        
+    </form>
+
+    
+
+{% endblock %}

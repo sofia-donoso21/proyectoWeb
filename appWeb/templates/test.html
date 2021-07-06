@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block titulo %}
+    Ayuda a un Peludo Test
+{% endblock %}
+
+{% block contenido %}
+    <h1>Hola Mundo estamos aprendiendo Layout con DJango</h1>
+    <h3>Aqui va el contenido de la pagina hola mundo</h3>
+
+        <h1>Pagina de prueba</h1>
+        <h2>Bienvenida {{nombre}}</h2>
+
+        <h3>Lista de Mascotas</h3>
+
+        <ol>
+            {% for mascota in mascotas%}
+                <li>{{mascota}}</li>
+            {% endfor %}
+        </ol>
+
+        <h3>El peludo que elegiste es : {{mascotas.0}}</h3>
+    
+        <h3>{{nombre}}, tiene un hijo llamado : {{hijo.nombre}} y tiene : {{hijo.edad}} años de edad </h3>
+
+{% endblock %}

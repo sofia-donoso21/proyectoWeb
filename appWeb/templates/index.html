@@ -1,0 +1,80 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block titulo %}
+    Inicio
+{% endblock %}
+
+{% block style %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">  
+{% endblock style %}
+
+{% block contenido %}
+  
+    <nav class="navegacion">
+        <div class="row fondoNaranja-center">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                <a class="nav-link letraMenu" href="/index"><strong>INICIO </strong></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link letraMenu" href="/contacto"><strong>CONTACTENOS</strong></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link letraMenu" href="/clima"><strong>CLIMA</strong></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link letraMenu" href="/test"><strong>TEST</strong></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="row" style="margin-top: 5%; margin-left:70px ;"> 
+        <div class="card" style="width: 300px; margin-left: 50px;">
+            <img class="card-img-top" src="{% static 'img/residencia1.jpg' %}" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Residencia Disponible</h4>
+                <p class="card-text">
+                Some quick example text to build on the card title
+                and make up the bulk of the card's content.
+                </p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 300px; ">
+            <img class="card-img-top" src="{% static 'img/residencia2.jpg' %}" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Residencia Disponible</h4>
+                <p class="card-text">
+                Some quick example text to build on the card title
+                and make up the bulk of the card's content.
+                </p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 300px; ">
+            <img class="card-img-top" src="{% static 'img/residencia3.jpg' %}" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Residencia Ocupada</h4>
+                <p class="card-text">
+                Some quick example text to build on the card title
+                and make up the bulk of the card's content.
+                </p>
+            </div>
+        </div>
+        
+        <div class="card" style="width: 300px; ">
+            <img class="card-img-top" src="{% static 'img/residencia4.jpg' %}" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Residencia Disponible</h4>
+                <p class="card-text">
+                Some quick example text to build on the card title
+                and make up the bulk of the card's content.
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

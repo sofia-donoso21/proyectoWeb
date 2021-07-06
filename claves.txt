@@ -1,0 +1,7 @@
+NOMBRE USUARIO       |CLAVE             |
+---------------------|------------------|
+Administrador        |ATRsofiadonoso2021|
+---------------------|------------------|
+Empleado             |ETRsofiadonoso2021|
+---------------------|------------------|
+Cliente              |CTRsofiadonoso2021|

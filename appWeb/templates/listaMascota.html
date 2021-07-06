@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block titulo %}
+    Lista Reservas
+{% endblock %}
+
+
+{% block contenido %}
+    <div class="row">
+        <h1 style="color: azure;">Lista de reservas</h1>
+    </div>
+
+    <div class="row center">
+    <table class="table custom-table" border="1" style="margin-left: 20px;"> 
+        <tr><td><strong>CODIGO:</strong></td><td><strong>NOMBRE:</strong></td> <td><strong>DIRECCION:</strong></td> <td><strong>EMPLEADO:</strong></td> <td><strong>RESERVADA:</strong></td> <td><strong>ACCIÓN:</strong></td>    
+        {% for mascota in mascotas %}            
+            <tr>
+                 <td>{{mascota.codigo}}</td> <td>{{mascota.nombre}}</td> <td>{{mascota.tipoMascota}}</td><td>{{mascota.adoptado}}</td>
+                <td><a class="btn btn-primary" href="{% url 'formmascotamod' mascota.id %}">Modificar</a>
+                <td><a class="btn btn-danger" href="{% url 'formmascotadel' mascota.id %}">Eliminar</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'formmascota' %}" class="btn btn-warning" >Agregar Mascota</a>
+{% endblock %}
